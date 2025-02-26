@@ -1,0 +1,22 @@
+kw1:
+
+SELECT `rozgrywka`.`zespol1`, `rozgrywka`.`zespol2`, `rozgrywka`.`wynik`, `rozgrywka`.`data_rozgrywki`
+FROM `rozgrywka`
+WHERE `rozgrywka`.`zespol1` = 'EVG';
+
+kw2:
+
+SELECT `zawodnik`.`imie`, `zawodnik`.`nazwisko`
+FROM `zawodnik`
+WHERE `zawodnik`.`pozycja_id` = '3';
+
+kw3:
+
+SELECT `zawodnik`.`id`, `zawodnik`.`nazwisko`, `pozycja`.`nazwa`
+FROM `zawodnik`
+JOIN `pozycja` ON `zawodnik`.`pozycja_id` = `pozycja`.`id`
+WHERE `zawodnik`.`pozycja_id` IN (1, 2, 3);
+
+kw4:
+
+DROP TABLE `ee_09_2021_01_01`.`liga`;

@@ -1,0 +1,15 @@
+kw1:
+
+SELECT `zawodnik`.`imie`, `zawodnik`.`nazwisko` FROM `zawodnik` WHERE `zawodnik`.`pozycja_id` = '4';
+
+kw2:
+
+SELECT `liga`.`zespol`, `liga`.`punkty`, `liga`.`grupa` FROM `liga` ORDER BY `liga`.`punkty` DESC;
+
+kw3:
+
+SELECT `zawodnik`.`id`, `zawodnik`.`nazwisko`, `pozycja`.`nazwa` FROM `zawodnik` JOIN `pozycja` ON `zawodnik`.`pozycja_id` = `pozycja`.`id` WHERE `zawodnik`.`id` IN (3, 5);
+
+kw4:
+
+TRUNCATE `ee_09_2021_01_02`.`rozgrywka`;

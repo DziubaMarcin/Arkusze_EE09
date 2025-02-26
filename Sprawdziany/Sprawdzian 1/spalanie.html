@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Kalkulator spalania - Moto kalkulator</title>
+    <link rel="stylesheet" href="styl1.css">
+  </head>
+  <body>
+      
+      <header>
+          
+          <div id="logo">
+              
+              <img src="logo.png" alt="logo">
+              
+          </div>
+          
+          <nav>
+              
+              <a href="spalanie.html"> Spalanie </a>
+              <a href="koszt_dojazdu.html"> Koszt dojazdu </a>
+              
+          </nav>
+          
+      </header>
+      
+      <main>
+          
+          <h1>Kalkulator spalania</h1>
+          <label for="trasa">Podaj długość trasy [km]</label><br>
+          <input type="number" id="trasa" name="trasa" placeholder="Długość Trasy"><br>
+          <label for="litry">Podaj ilość spalonego paliwa [L]</label><br>
+          <input type="number" id="litry" name="litry" placeholder="Spalone Paliwo"><br>
+          <button id="guzik">Oblicz</button><br>
+          
+          <div id="wynik"></div>
+          
+      </main>
+      
+      <footer>
+          
+          <p>Stronę wykonał: Marcin Dziuba 4B</p>
+          
+      </footer>
+      
+      <script>
+          
+          var guzik = document.getElementById("guzik");
+          var wynik = document.getElementById("wynik");
+          
+          guzik.onclick = function() {
+              var trasa = Number(document.getElementById("trasa").value);
+              var litry = Number(document.getElementById("litry").value);
+              
+              wynik.innerHTML = "Średnie spalanie na 100 km wynosi: "+((litry / trasa) * 100).toFixed(2)+" [L] ";
+          }
+          
+      </script>
+      
+      
+      
+  </body>
+</html>

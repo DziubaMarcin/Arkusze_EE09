@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="./styl5.css">
+    <meta charset="utf-8">
+    <title>Portal Ogłoszeniowy</title>
+  </head>
+  <body>
+      
+      <section id="baner">
+          
+          <h1>Portal Ogłoszeniowy</h1>
+          
+      </section>
+      
+      <section id="info">
+          
+          <div id="jeden">
+              
+              <img src="logo-male.png" alt="logo">
+              
+          </div>
+          
+          <div id="dwa">
+              
+              <h3>Adres</h3>
+              <p>ul. Morska 45 Gdynia</p>
+              
+          </div>
+          
+          <div id="trzy">
+              
+              <h3>telefon</h3>
+              <p>601601601</p>
+              
+          </div>
+          
+          <div id="cztery">
+              
+              <h3>e-mail</h3>
+              <p>ogloszenia@poczta.pl</p>
+              
+          </div>
+      
+      </section>
+      
+      <section id="main">
+          
+          <div id="lewy">
+              
+              <h2>Ceny ogłoszeń</h2>
+              
+              <table>
+                  
+                  <tr>
+                      <th>Liczba ogłoszeń</th>
+                      <th>Cena ogłoszenia</th>
+                      <th>Bonus</th>
+                  </tr>
+                  
+                  <tr>
+                      <td>1 - 50</td>
+                      <td>2 PLN</td>
+                      <td rowspan="2">Subskrypcja newslettera to upust 0,20 PLN na ogłoszenie</td>
+                  </tr>
+                  
+                  <tr>
+                      <td>51 i więcej</td>
+                      <td>1 PLN</td>
+                  </tr>
+                  
+              </table>
+              
+          </div>
+          
+          <div id="srodek">
+              
+              <h2>Witamy na stronie naszego portalu!</h2>
+              <img src="logo-duze.png" alt="ogłoszenia">
+              
+          </div>
+          
+          <div id="prawy">
+              
+              <h2>Ile kosztuje ogłoszenie?</h2>
+              
+              <label for="ilo">Podal liczbę ogłoszeń:</label>
+              <input type="number" name="ilo" id="ilo"><br>
+              <input type="checkbox" name="news" id="news">
+              <label for="news">Policz upust na newsletter</label><br>
+              <input type="button" value="Oblicz" id="guzik">
+              <br>
+              <div id="wynik"></div>
+              
+              
+          </div>
+      
+      </section>
+      
+      <section id="footer">
+          
+          <p>Portal ogłoszeniowy opracował: Marcin Dziuba 4B</p>
+      
+      </section>
+      
+      <script>
+          
+          /*var wynik = document.getElementById("wynik");
+          
+          var guzik = document.getElementById("guzik");
+          
+          guzik.onclick = function() {
+              
+              var newsletter = document.getElementById("news").checked;
+              
+              var iloscogloszen = document.getElementById("ilo").value;
+              
+              if (iloscogloszen <= 50) {
+                  
+                  if (newsletter == true) {
+                      
+                      wynik.innerHTML = "Koszt ogłoszeń: "+(iloscogloszen * 1.80).toFixed(2)+" PLN";
+                      
+                  } else {
+                      
+                      wynik.innerHTML = "Koszt ogłoszeń: "+(iloscogloszen * 2.00).toFixed(2)+" PLN";
+                      
+                  }
+                  
+              } else {
+                  
+                  if (newsletter == true) {
+                      
+                      wynik.innerHTML = "Koszt ogłoszeń: "+(iloscogloszen * 0.80).toFixed(2)+" PLN";
+                      
+                  } else {
+                      
+                      wynik.innerHTML = "Koszt ogłoszeń: "+(iloscogloszen * 1.00).toFixed(2)+" PLN";
+                      
+                  }
+                  
+              }              
+              
+          }*/
+          
+          var wynik = document.getElementById("wynik");
+          
+          var guzik = document.getElementById("guzik");
+          
+          guzik.onclick = function() {
+              
+              var cena;
+              
+              var newsletter;
+              
+              var iloscogloszen = document.getElementById("ilo").value;
+              
+              document.getElementById("news").checked ? newsletter = 0.20 : newsletter = 0.00;
+              
+              iloscogloszen <= 50 ? cena = 2.00 : cena = 1.00;
+              
+              wynik.innerHTML = "Koszt ogłoszeń: "+(iloscogloszen * (cena - newsletter)).toFixed(2)+" PLN";
+              
+              
+          }
+          
+      </script>
+      
+  </body>
+</html>

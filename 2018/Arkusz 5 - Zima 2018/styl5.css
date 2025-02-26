@@ -1,0 +1,55 @@
+#baner {
+    background-color: #009999;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+
+#info > div {
+    font-family: Arial;
+    background-color: #009999;
+    color: white;
+    text-align: center;
+    width: 25%;
+    height: 150px;
+}
+
+#lewy, #prawy {
+    background-color: #669999;
+    width: 30%;
+    height: 600px;
+}
+
+#srodek {
+    background-color: #99CCCC;
+    width: 40%;
+    height: 600px;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid green;
+    text-align: center;
+}
+
+#guzik {
+    border: none;
+    margin: 10px;
+    background-color: green;
+    color: white;
+}
+
+#footer {
+    background-color: #009999;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+#info, #main {
+    display: flex;
+}
+
+

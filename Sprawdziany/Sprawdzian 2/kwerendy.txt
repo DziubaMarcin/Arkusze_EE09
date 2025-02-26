@@ -1,0 +1,15 @@
+kw1:
+
+SELECT `podzespoly`.`id`, `podzespoly`.`nazwa`, `podzespoly`.`opis`, `podzespoly`.`cena` FROM `podzespoly` WHERE `podzespoly`.`cena` < '1000';
+
+kw2:
+
+SELECT `podzespoly`.`nazwa`, `podzespoly`.`opis` FROM `podzespoly` LEFT JOIN `producenci` ON `podzespoly`.`producenci_id` = `producenci`.`id` WHERE `podzespoly`.`dostepnosc` = '1' AND `producenci`.`id` = '1';
+
+kw3:
+
+SELECT `podzespoly`.`nazwa`, `producenci`.`nazwa` FROM `podzespoly` LEFT JOIN `producenci` ON `podzespoly`.`producenci_id` = `producenci`.`id`;
+
+kw4:
+
+UPDATE `producenci` SET `nazwa` = 'PATRIOT' WHERE `producenci`.`id` = 8;

@@ -1,0 +1,48 @@
+* {
+    font-family: Georgia;
+}
+
+nav, #lgo {
+    background-color: #63AC74;
+    color: orange;
+    height: 140px;
+    width: 50%;
+    text-align: right;
+    font-size: 160%;
+}
+
+main {
+    background-color: #E3F6E7;
+    height: 500px;
+    padding: 20px;
+    
+}
+
+footer div {
+    background-color: #63AC74;
+    height: 150px;
+    width: 25%;
+}
+
+a {
+    color: orange;
+    margin: 15px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid green;
+}
+
+th {
+    background-color: #63AC74;
+    color: white;
+}
+
+td:nth-of-type(4){
+text-align: right;
+}
+
+header, footer {
+    display: flex;
+}

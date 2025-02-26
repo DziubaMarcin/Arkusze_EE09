@@ -1,0 +1,70 @@
+* {
+    font-family: Verdana;
+}
+
+header {
+    background-color: #3e705c;
+    height: 200px;
+    padding: 15px;
+    display: flex;
+}
+
+header img {
+    height: 150px;
+}
+
+header a {
+    margin: 10px;
+    color: crimson;
+}
+
+main {
+    background-color: #FFFFFF;
+    padding: 30px;
+    text-align: center;
+}
+
+footer {
+    background-color: #3e705c;
+    color: #FFFFFF;
+    height: 90px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 30%;
+}
+
+nav {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#tresc {
+    display: flex;
+}
+
+#lewy {
+    width: 50%;
+    text-align: center;
+    margin: 10px;
+}
+
+#prawy {
+    width: 50%;
+    text-align: center;
+    margin: 10px;
+}
+
+section img {
+    width: 500px;
+}
+
+section a {
+    display: flex;
+    justify-content: center;
+}

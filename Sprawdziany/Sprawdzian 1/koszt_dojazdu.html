@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Kalkulator kosztów dojazdu - Moto kalkulator</title>
+    <link rel="stylesheet" href="styl1.css">
+  </head>
+  <body>
+      
+      <header>
+          
+          <div id="logo">
+              
+              <img src="logo.png" alt="logo">
+              
+          </div>
+          
+          <nav>
+              
+              <a href="spalanie.html"> Spalanie </a>
+              <a href="koszt_dojazdu.html"> Koszt dojazdu </a>
+              
+          </nav>
+          
+      </header>
+      
+      <main>
+          
+          <h1>Kalkulator kosztów dojazdu</h1>
+          <label for="cena">Podaj cenę paliwa [PLN/L]</label><br>
+          <input type="number" id="cena" name="cena" placeholder="Cena Paliwa"><br>
+          <label for="trasa">Podaj długość trasy [km]</label><br>
+          <input type="number" id="trasa" name="trasa" placeholder="Długość Trasy"><br>
+          <label for="spalanie">Podaj średnie spalanie samochodu [L/100km]</label><br>
+          <input type="number" id="spalanie" name="spalanie" placeholder="Średnie Spalanie"><br>
+          <button id="guzik">Oblicz</button><br>
+          <div id="wynik"></div>
+          
+      </main>
+      
+      <footer>
+          
+          <p>Stronę wykonał: Marcin Dziuba 4B</p>
+          
+      </footer>
+      
+      <script>
+          
+          var guzik = document.getElementById("guzik");
+          var wynik = document.getElementById("wynik");
+          
+          guzik.onclick = function() {
+              var cena = Number(document.getElementById("cena").value);
+              var trasa = Number(document.getElementById("trasa").value);
+              var spalanie = Number(document.getElementById("spalanie").value);
+              
+              wynik.innerHTML = "Koszt dojazdu wyniesie: "+(((trasa * spalanie) / 100) * cena).toFixed(2)+" PLN";
+          }
+          
+      </script>
+      
+  </body>
+</html>
