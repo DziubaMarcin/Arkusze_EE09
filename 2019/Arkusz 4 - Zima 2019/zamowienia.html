@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+   <head>
+      <meta charset="utf-8">
+      <title>Hurtownia</title>
+      <meta name="description" content="Hurtownia Kawy">
+      <link rel="stylesheet" href="styl4.css">
+   </head>
+   <body>
+       
+       <section id="gora">
+           
+           <div id="logo">
+               
+               <img src="logo.png" alt="hurtownia">
+               
+           </div>
+           
+           <div id="menu">
+               
+               <a href="index.html">Strona główna</a>
+               <a href="zamowienia.html">Zamówienia</a>
+               <a href="blog.html">Blog o kawie</a>
+               <a href="http://gatunki-kawy.pl" target="_blank">Odwiedź także</a>
+               
+           </div>
+           
+       </section>
+       
+       <section id="baner">
+           
+           <h1>Hurtownia kawy</h1>
+           
+       </section>
+       
+       <section id="dol">
+           
+           <div id="lewy">
+               
+               <h2>Oferta</h2>
+               
+               <ol>
+                   <li>Kawa palona Arbica</li>
+                   <li>Kawa palona Robusta</li>
+                   <li>Kawa bezkofeinowa</li>
+                   <li>Kawa zielona</li>
+               </ol>
+               
+           </div>
+           
+           <div id="prawy">
+               
+               <label for="nrkawy">Podaj numer kawy:</label><br>
+               <input type="number" id="nrkawy" name="nrkawy"><br>
+               <label for="masa">Podaj wagę w dekagramach</label><br>
+               <input type="number" id="masa" name="masa"><br>
+               <input type="button" value="Zamów" id="guzik" name="guzik">
+               <div id="wynik"></div>
+               
+           </div>
+           
+       </section>
+       
+       <section id="stopka">
+           
+           <p>Stronę przygotował: <b>Marcin Dziuba 4B</b></p>       
+           
+       </section>
+       
+       <script>
+           
+           var guzik = document.getElementById("guzik");
+           
+           var wynik = document.getElementById("wynik");
+           
+           guzik.onclick = function() {
+               
+               var ilosc = document.getElementById("masa").value;
+               
+               var nrkawy = document.getElementById("nrkawy").value;
+               
+               switch (nrkawy) {
+                       case '1':                        
+                        wynik.innerHTML = "Kosz zamówienia wynosi "+(5 * ilosc)+" zł";
+                        break;
+                       case '2':                        
+                        wynik.innerHTML = "Kosz zamówienia wynosi "+(7 * ilosc)+" zł";
+                        break;
+                       case '3':                        
+                        wynik.innerHTML = "Kosz zamówienia wynosi "+(6 * ilosc)+" zł";
+                        break;
+                       default:                        
+                        wynik.innerHTML = "Kosz zamówienia wynosi "+0+" zł";
+               }
+           }
+           
+       </script>
+       
+   </body>
+</html>

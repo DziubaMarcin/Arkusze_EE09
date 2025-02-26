@@ -1,0 +1,44 @@
+* {
+    font-family: Helvetica;
+}
+
+#banner {
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#frm {
+    background-color: lightseagreen;
+    text-align: center;
+    padding: 60px;
+}
+
+#left, #center {
+    background-color: teal;
+    color: white;
+    text-align: center;
+    height: 350px;
+    width: 25%;
+}
+
+#right {
+    background-color: teal;
+    height: 350px;
+    width: 50%;
+}
+
+footer {
+    background-color: darkcyan;
+    color: white;
+    padding: 40px;
+}
+
+ul {
+    border: 4px dotted rgb(127,255,212);
+}
+
+main {
+    display: flex;
+}

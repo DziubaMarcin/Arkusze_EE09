@@ -1,0 +1,7 @@
+SELECT `grzyby`.`nazwa`, `grzyby`.`potoczna` FROM `grzyby` WHERE `grzyby`.`jadalny` = 1;
+
+SELECT `grzyby`.`nazwa`, `grzyby`.`potoczna`, `rodzina`.`nazwa` FROM `grzyby` JOIN `rodzina` ON `grzyby`.`rodzina_id` = `rodzina`.`id` JOIN `potrawy` ON `grzyby`.`potrawy_id` = `potrawy`.`id` WHERE `potrawy`.`nazwa` = 'sos';
+
+SELECT `grzyby`.`nazwa_pliku`, `grzyby`.`potoczna` FROM `grzyby`;
+
+ALTER TABLE `rodzina` ADD `opis` TEXT NOT NULL AFTER `nazwa`;
